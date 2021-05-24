@@ -12,7 +12,7 @@ const currentUser = async (req, res) => {
         };
         res.send({
             code: 1,
-            user: userData
+            data: userData
         });
     }).catch(err => res.send({ code: 0, error: err }));
 }

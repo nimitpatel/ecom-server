@@ -105,3 +105,6 @@ dist
 
 # custom files
 config/dev.js
+data.js
+importToDB.js
+moredata.json
