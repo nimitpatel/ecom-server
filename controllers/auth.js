@@ -15,7 +15,8 @@ const callbackMiddleware = passport.authenticate('google', { session: false })
 
 const setToken = (req, res) => {
     let token = req.user.token
-    res.cookie('ecom', token, { domain: '.proffie.me' });
+    const expires = new Date()
+    res.cookie('ecom', token, { domain: '.proffie.me', expires: expires.setDate(expires.getDate() + 7) });
     res.redirect('https://ecom.proffie.me/');
     // res.cookie('ecom', token);
     // res.redirect('http://localhost:3000/');
